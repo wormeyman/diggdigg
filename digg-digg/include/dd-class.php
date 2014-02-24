@@ -1197,10 +1197,10 @@ class DD_Reddit extends BaseIFrameDD{
 	const URL_API = "http://www.reddit.com/buttons/";
 	const DEFAULT_BUTTON_WEIGHT = "99";
 	
-	const BASEURL = "<iframe src=\"http://www.reddit.com/static/button/VOTE_BUTTON_DESIGN&url=VOTE_URL&title=VOTE_TITLE&newwindow='1'\" EXTRA_VALUE scrolling='no' frameborder='0'></iframe>";
+	const BASEURL = "<iframe src=\"http://www.reddit.com/static/button/VOTE_BUTTON_DESIGN&amp;url=VOTE_URL&amp;title=VOTE_TITLE&amp;newwindow='1'\" EXTRA_VALUE scrolling='no' frameborder='0'></iframe>";
 	
 	const BASEURL_LAZY = "<div class='dd-reddit-ajax-load dd-reddit-POST_ID'></div><iframe class='DD_REDDIT_AJAX_POST_ID' src='' height='0' width='0' scrolling='no' frameborder='0'></iframe>";
-	const BASEURL_LAZY_SCRIPT = " function loadReddit_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-reddit-POST_ID').remove();\$('.DD_REDDIT_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_REDDIT_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_REDDIT_AJAX_POST_ID').attr('src','http://www.reddit.com/static/button/VOTE_BUTTON_DESIGN&url=VOTE_URL&title=VOTE_TITLE&newwindow=1'); }); }";
+	const BASEURL_LAZY_SCRIPT = " function loadReddit_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-reddit-POST_ID').remove();\$('.DD_REDDIT_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_REDDIT_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_REDDIT_AJAX_POST_ID').attr('src','http://www.reddit.com/static/button/VOTE_BUTTON_DESIGN&amp;url=VOTE_URL&amp;title=VOTE_TITLE&amp;newwindow=1'); }); }";
 	const SCHEDULER_LAZY_SCRIPT = "window.setTimeout('loadReddit_POST_ID()',SCHEDULER_TIMER);";
 	const SCHEDULER_LAZY_TIMER = "1000";
 	
@@ -1281,7 +1281,7 @@ class DD_DZone extends BaseDD{
 	const BASEURL = "<iframe src='http://widgets.dzone.com/links/widgets/zoneit.html?url=VOTE_URL&amp;title=VOTE_TITLE&amp;t=VOTE_BUTTON_DESIGN frameborder='0' scrolling='no'></iframe>";
 	
 	const BASEURL_LAZY = "<div class='dd-dzone-ajax-load dd-dzone-POST_ID'></div><iframe class='DD_DZONE_AJAX_POST_ID' src='' height='0' width='0' scrolling='no' frameborder='0'></iframe>";
-	const BASEURL_LAZY_SCRIPT = " function loadDzone_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-dzone-POST_ID').remove();\$('.DD_DZONE_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_DZONE_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_DZONE_AJAX_POST_ID').attr('src','http://widgets.dzone.com/links/widgets/zoneit.html?url=VOTE_URL&title=VOTE_TITLE&t=VOTE_BUTTON_DESIGN'); }); }";
+	const BASEURL_LAZY_SCRIPT = " function loadDzone_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-dzone-POST_ID').remove();\$('.DD_DZONE_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_DZONE_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_DZONE_AJAX_POST_ID').attr('src','http://widgets.dzone.com/links/widgets/zoneit.html?url=VOTE_URL&amp;title=VOTE_TITLE&amp;t=VOTE_BUTTON_DESIGN'); }); }";
 	const SCHEDULER_LAZY_SCRIPT = "window.setTimeout('loadDzone_POST_ID()',SCHEDULER_TIMER);";
 	const SCHEDULER_LAZY_TIMER = "1000";
 	
@@ -1452,7 +1452,7 @@ class DD_FbShareMe extends BaseDD{
 	const OPTION_LAZY_LOAD = "dd_fbshareme_lazy_load";
 
 	const BASEURL_LAZY = "<div class='dd-fbshareme-ajax-load dd-fbshareme-POST_ID'></div><iframe class=\"DD_FBSHAREME_AJAX_POST_ID\" src='' height='0' width='0' scrolling='no' frameborder='0' allowtransparency='true'></iframe>";
-	const BASEURL_LAZY_SCRIPT = " function loadFBShareMe_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-fbshareme-POST_ID').remove();\$('.DD_FBSHAREME_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_FBSHAREME_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_FBSHAREME_AJAX_POST_ID').attr('src','http://widgets.fbshare.me/files/fbshare.php?url=VOTE_URL&size=VOTE_BUTTON_DESIGN');  }); }";
+	const BASEURL_LAZY_SCRIPT = " function loadFBShareMe_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-fbshareme-POST_ID').remove();\$('.DD_FBSHAREME_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_FBSHAREME_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_FBSHAREME_AJAX_POST_ID').attr('src','http://widgets.fbshare.me/files/fbshare.php?url=VOTE_URL&amp;size=VOTE_BUTTON_DESIGN');  }); }";
 	const SCHEDULER_LAZY_SCRIPT = "window.setTimeout('loadFBShareMe_POST_ID()',SCHEDULER_TIMER);";
 	const SCHEDULER_LAZY_TIMER = "1000";
 	
@@ -1859,7 +1859,7 @@ class DD_TweetMeme extends BaseDD{
 	const URL_API = "http://wordpress.org/extend/plugins/tweetmeme/";
 	const DEFAULT_BUTTON_WEIGHT = "97";
 	
-	const BASEURL ="<iframe src='http://api.tweetmeme.com/button.js?url=VOTE_URL&source=VOTE_SOURCE&service=VOTE_SERVICE_NAME&service_api=VOTE_SERVICE_API&style=VOTE_BUTTON_DESIGN frameborder='0' scrolling='no'></iframe>";
+	const BASEURL ="<iframe src='http://api.tweetmeme.com/button.js?url=VOTE_URL&amp;source=VOTE_SOURCE&amp;service=VOTE_SERVICE_NAME&amp;service_api=VOTE_SERVICE_API&amp;style=VOTE_BUTTON_DESIGN frameborder='0' scrolling='no'></iframe>";
 	const OPTION_APPEND_TYPE = "dd_tweetmeme_appendType";
 	const OPTION_BUTTON_DESIGN = "dd_tweetmeme_buttonDesign";
 	const OPTION_BUTTON_WEIGHT = "dd_tweetmeme_button_weight";
@@ -1867,7 +1867,7 @@ class DD_TweetMeme extends BaseDD{
 	const OPTION_LAZY_LOAD = "dd_tweetmeme_lazy_load";
 	
 	const BASEURL_LAZY = "<div class='dd-tweetmeme-ajax-load dd-tweetmeme-POST_ID'></div><iframe class='DD_TWEETMEME_AJAX_POST_ID' src='' height='0' width='0' scrolling='no' frameborder='0'></iframe>";
-	const BASEURL_LAZY_SCRIPT = " function loadTweetMeme_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-tweetmeme-POST_ID').remove();\$('.DD_TWEETMEME_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_TWEETMEME_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_TWEETMEME_AJAX_POST_ID').attr('src','http://api.tweetmeme.com/button.js?url=VOTE_URL&source=VOTE_SOURCE&style=VOTE_BUTTON_DESIGN&service=VOTE_SERVICE_NAME&service_api=VOTE_SERVICE_API'); }); }";
+	const BASEURL_LAZY_SCRIPT = " function loadTweetMeme_POST_ID(){ jQuery(document).ready(function(\$) { \$('.dd-tweetmeme-POST_ID').remove();\$('.DD_TWEETMEME_AJAX_POST_ID').attr('width','VOTE_BUTTON_DESIGN_LAZY_WIDTH');\$('.DD_TWEETMEME_AJAX_POST_ID').attr('height','VOTE_BUTTON_DESIGN_LAZY_HEIGHT');\$('.DD_TWEETMEME_AJAX_POST_ID').attr('src','http://api.tweetmeme.com/button.js?url=VOTE_URL&amp;source=VOTE_SOURCE&amp;style=VOTE_BUTTON_DESIGN&amp;service=VOTE_SERVICE_NAME&amp;service_api=VOTE_SERVICE_API'); }); }";
 	const SCHEDULER_LAZY_SCRIPT = "window.setTimeout('loadTweetMeme_POST_ID()',SCHEDULER_TIMER);";
 	const SCHEDULER_LAZY_TIMER = "1000";
 	
