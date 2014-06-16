@@ -382,9 +382,8 @@ function dd_getPostData() {
     $id = $post->ID; //get post id
     $postlink = get_permalink($id); //get post link
     $title = trim($post->post_title); // get post title
-    $link = explode(DD_DASH,$postlink); //split the link with '#', for comment
+    $link = split(DD_DASH,$postlink); //split the link with '#', for comment
     
     return array( 'id' => $id, 'link' => $link[0], 'title' => $title );
 }
-
 ?>
