@@ -26,7 +26,7 @@ require_once 'include/dd-upgrade.php';
 //function to be run when the plugin is activated
 register_activation_hook( __FILE__, 'dd_run_when_plugin_activated' );
 
-add_action('wp_enqueue_scripts', 'dd_enable_required_js_in_wordpress' );
+add_action('init', 'dd_enable_required_js_in_wordpress' );
 add_action( 'wp_enqueue_scripts', 'dd_wp_enqueue_styles' );
 add_action( 'wp_head', 'dd_get_thumbnails_for_fb' );
 add_filter( 'the_excerpt', 'dd_hook_wp_content' );
@@ -353,9 +353,9 @@ function integrateFloatingButtonsIntoWpContent($dd_floating_button_for_display,$
         $floatingJSOptions .= 'var dd_override_start_anchor_id = "'. $dd_override_start_anchor_id . '";';
         $floatingJSOptions .= 'var dd_override_top_offset = "'. $dd_override_top_offset . '";';
         $floatingJSOptions .= '</script>';
-		// $floatingJS = '<script type="text/javascript" src="' . DD_PLUGIN_URL . '/js/diggdigg-floating-bar.js?ver=' . DD_VERSION . '"></script>';
+		$floatingJS = '<script type="text/javascript" src="' . DD_PLUGIN_URL . '/js/diggdigg-floating-bar.js?ver=' . DD_VERSION . '"></script>';
 
-		$dd_floating_bar = "<div class='dd_outer'><div class='dd_inner'>" . $floatButtonsContainer . "</div></div>" . $floatingJSOptions . $dd_lazyLoad_scheduler_script . $dd_lazyLoad_jQuery_script;
+		$dd_floating_bar = "<div class='dd_outer'><div class='dd_inner'>" . $floatButtonsContainer . "</div></div>" . $floatingJSOptions . $floatingJS . $dd_lazyLoad_scheduler_script . $dd_lazyLoad_jQuery_script;
 		$dd_start_anchor = '<a id="dd_start"></a>';
 
 		if(!$ddFloatDisplay[DD_COMMENT_ANCHOR_OPTION][DD_COMMENT_ANCHOR_OPTION_STATUS]){

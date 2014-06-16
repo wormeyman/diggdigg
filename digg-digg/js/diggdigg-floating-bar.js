@@ -11,10 +11,6 @@ jQuery(document).ready(function(){
     }
 
 	var $dd_start = jQuery( '#' + dd_anchorId );
-    // if anchor element is not found then the rest is moot. Bail out to avoid errors.
-    if ( $dd_start.length === 0 ) {
-        return;
-    }
 	var $dd_end = jQuery('#dd_end');
 	var $dd_outer = jQuery('.dd_outer');
 	
