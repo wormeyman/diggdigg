@@ -176,6 +176,10 @@
 	float:left;
 	padding:4px
 }
+.dd_button .fb_iframe_widget iframe {
+	max-width: inherit;
+}
+
 
 .dd_fblike_xfbml_ajax_left_float {
 	padding-left:3px
