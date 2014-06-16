@@ -144,6 +144,7 @@ function dd_enable_required_js_in_wordpress() {
 		//jQuery need to put on head
 		wp_enqueue_script('jquery');
 	}
+    wp_enqueue_script( 'diggdigg', DD_PLUGIN_URL . 'js/diggdigg-floating-bar.js', array(), DD_VERSION );
 }
 
 //filter for ajax floating javascript
